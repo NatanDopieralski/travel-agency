@@ -2,7 +2,7 @@ import {connect} from 'react-redux';
 import TripListOptions from './TripListOptions';
 import {getAllTags} from '../../../redux/tagsRedux';
 import {getAllFilters, changeSearchPhrase} from '../../../redux/filtersRedux';
-import {addTags, removeTags, changeDurations} from '../../../redux/filtersRedux'
+import {addTags, removeTags, changeDurations} from '../../../redux/filtersRedux';
 
 const mapStateToProps = state => ({
   tags: getAllTags(state),
