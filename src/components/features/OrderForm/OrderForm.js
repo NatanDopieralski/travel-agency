@@ -6,7 +6,7 @@ import OrderSummary from '../OrderSummary/OrderSummary';
 import pricing from '../../../data/pricing.json';
 import OrderOption from '../OrderOption/OrderOption';
 
-const OrderForm = (tripCost, options, setOrderOption) => {
+const OrderForm = ({tripCost, options, setOrderOption}) => {
     return (
         <Section>
             <Grid>

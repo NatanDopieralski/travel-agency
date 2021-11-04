@@ -2,8 +2,7 @@ import React from 'react';
 import { formatPrice } from '../../../utils/formatPrice';
 import styles from './OrderOption.module.scss';
 
-const OrderOptionNumber = (currentValue, limits, price, setOptionValue) => {
-    console.log(limits)
+const OrderOptionNumber = ({currentValue, limits, price, setOptionValue}) => {
     return (
         <div className={styles.number}>
             <input
