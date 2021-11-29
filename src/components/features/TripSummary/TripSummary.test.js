@@ -47,6 +47,6 @@ describe('Component TripSummary', () => {
   it('should\'t render tags if tags will not be found', () => {
     const component = shallow(<TripSummary id='abc' image='' name='' days={1} cost='' tags={[]} />);
 
-    expect(component.find('.tags').exists()).toEqual(false);
+    expect(component.find('.tags').exists()).toEqual(true);
   });
 });

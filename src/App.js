@@ -42,12 +42,12 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <MainLayout>
-            <AnimatedSwitch
-              atEnter={{ opacity: 0 }}
-              atLeave={{ opacity: 0 }}
-              atActive={{ opacity: 1 }}
-              className={styles.switchWrapper}
-            >
+          <AnimatedSwitch
+            atEnter={{ opacity: 0 }}
+            atLeave={{ opacity: 0 }}
+            atActive={{ opacity: 1 }}
+            className={styles.switchWrapper}
+          >
             <Route exact path='/' component={Home} />
             <Route exact path='/trips' component={Trips} />
             <Route exact path='/trip/:id' component={Trip} />

@@ -19,7 +19,7 @@ export const CHANGE_DURATION = createActionName('CHANGE_DURATION');
 export const changeSearchPhrase = payload => ({ payload, type: CHANGE_PHRASE });
 // TODO - add other action creators
 export const addTags = payload => ({ payload, type: ADD_TAGS });
-export const removeTags = payload => ({ payload, type: REMOVE_TAGS})
+export const removeTags = payload => ({ payload, type: REMOVE_TAGS});
 export const changeDurations = payload => ({ payload, type: CHANGE_DURATION });
 
 // reducer
@@ -41,28 +41,28 @@ export default function reducer(statePart = [], action = {}) {
       return {
         ...statePart,
         tags: statePart.tags.filter(tag => tag !== action.payload),
-      }
+      };
     case CHANGE_DURATION:
       console.log(statePart, action.payload);
       if (action.payload.type === 'from') {
         return {
           ...statePart,
           duration: {
-          ...statePart.duration,
-          from: action.payload.duration
-          }
-        }
+            ...statePart.duration,
+            from: action.payload.duration,
+          },
+        };
       }
       else if (action.payload.type === 'to'){
         return {
           ...statePart,
           duration: {
-          ...statePart.duration,
-          to: action.payload.duration
-          }
-        }
+            ...statePart.duration,
+            to: action.payload.duration,
+          },
+        };
       }
-      break
+      break;
     default:
       return statePart;
   }
