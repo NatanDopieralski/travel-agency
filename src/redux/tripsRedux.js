@@ -21,7 +21,7 @@ export const getFilteredTrips = ({trips, filters}) => {
   // TODO - filter by tags
   if(filters.tags){
     for(let tag of filters.tags)
-    output = output.filter(trip => trip.tags.includes(tag));
+      output = output.filter(trip => trip.tags.includes(tag));
   }
 
   // TODO - sort by cost descending (most expensive goes first)

@@ -6,7 +6,7 @@ import {Col} from 'react-flexbox-grid';
 
 const TripSummary = ({id, image, name, cost, days, tags}) => {
   return (
-  <Col xs={12} sm={6} lg={4} className={styles.column}>
+    <Col xs={12} sm={6} lg={4} className={styles.column}>
       <Link to={`/trip/${id}`} className={styles.link}>
         <article className={styles.component}>
           <img src={image} alt={name} />
@@ -23,17 +23,17 @@ const TripSummary = ({id, image, name, cost, days, tags}) => {
         </article>
       </Link>
     </Col>
-  )
+  );
 };
 
 TripSummary.propTypes = {
   id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  image: PropTypes.string,
-  name: PropTypes.string,
+  image: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   intro: PropTypes.string,
-  cost: PropTypes.string,
-  days: PropTypes.number,
-  tags: PropTypes.array,
+  cost: PropTypes.string.isRequired,
+  days: PropTypes.number.isRequired,
+  tags: PropTypes.array.isRequired,
 };
 
 export default TripSummary;
