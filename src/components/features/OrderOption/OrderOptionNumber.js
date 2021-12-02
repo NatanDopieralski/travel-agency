@@ -7,6 +7,7 @@ const OrderOptionNumber = ({currentValue, limits, price, setOptionValue}) => {
   return (
     <div className={styles.number}>
       <input
+        required
         type="number"
         className={styles.inputSmall}
         value={currentValue}
@@ -21,7 +22,7 @@ const OrderOptionNumber = ({currentValue, limits, price, setOptionValue}) => {
 
 OrderOptionNumber.propTypes = {
   currentValue: PropTypes.number,
-  limits: PropTypes.object.isRequired,
+  limits: PropTypes.object,
   setOptionValue: PropTypes.func.isRequired,
   price: PropTypes.string,
 };

@@ -27,7 +27,7 @@ describe('Component TripSummary', () => {
     const expectedName = 'lorem';
     const expectedCost = '1';
     const expectedDays = 1;
-    const component = shallow(<TripSummary id='abc' image='' name={expectedName} days={expectedDays} cost={expectedCost} tags={['a', 'b', 'c']}  />);
+    const component = shallow(<TripSummary id='abc' image='' name={expectedName} cost={expectedCost} days={expectedDays} tags={['a', 'b', 'c']}  />);
 
     expect(component.find('.title').text()).toEqual(expectedName);
     expect(component.find('.details').childAt(0).text()).toEqual(expectedDays + ' days');
@@ -45,8 +45,8 @@ describe('Component TripSummary', () => {
     expect(component.find('.tag').at(2).text()).toEqual(expectedTagsArray[2]);
   });
   it('should\'t render tags if tags will not be found', () => {
-    const component = shallow(<TripSummary id='abc' image='' name='' days={1} cost='' tags={[]} />);
+    const component = shallow(<TripSummary id='abc' image='' name='' days={1} cost='' />);
 
-    expect(component.find('.tags').exists()).toEqual(true);
+    expect(component.find('.tags').exists()).toEqual(false);
   });
 });

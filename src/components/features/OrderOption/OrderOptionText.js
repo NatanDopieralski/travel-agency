@@ -6,6 +6,7 @@ const OrderOptionText = ({currentValue, setOptionValue}) => {
   return (
     <label className={styles.component}>
       <input
+        required
         type="text"
         value={currentValue}
         onChange={event => setOptionValue(event.currentTarget.value)}
